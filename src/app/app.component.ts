@@ -31,4 +31,13 @@ export class AppComponent {
 
   get counter() { return this.store.incrementState$.map(s => s.counter); }
 
+
+  ////////////////////////////////////////////////////////////////////
+  // Testing world
+  forTesting() {
+    this.counter.subscribe(counter => this._$counter = counter);
+  }
+
+  _$counter: number;
+
 }
