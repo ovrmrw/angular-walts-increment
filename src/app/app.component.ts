@@ -8,8 +8,8 @@ import { AppActions, AppDispatcher, AppStore } from '../store';
   template: `
     <div>Counter</div>
     <div>{{counter | async}}</div>
-    <button (click)="increment()">+</button>
-    <button (click)="decrement()">-</button>
+    <button (click)="increment()" id="increment-btn">+</button>
+    <button (click)="decrement()" id="decrement-btn">-</button>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -14,3 +14,10 @@ $ npm install
 ```
 $ npm start
 ```
+
+###Unit Test
+```
+$ npm run karma
+or
+$ npm run karma:w
+```

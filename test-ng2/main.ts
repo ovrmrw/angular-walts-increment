@@ -26,5 +26,5 @@ import {
 
 TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
 
-import '../src-specs/specs.ref'; // テストしたいTSファイル
+import '../src/specs'; // テストしたいTSファイル
 /* <<< boilerplate */
