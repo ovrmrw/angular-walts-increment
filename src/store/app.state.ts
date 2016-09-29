@@ -1,4 +1,4 @@
-import { State } from 'walts';
+// import { State } from 'walts';
 
 
 export interface IncrementState {
@@ -9,7 +9,7 @@ export interface OtherState {
   prop: string;
 }
 
-export interface AppState extends State {
+export interface AppState /* extends State */ {
   increment?: IncrementState;
   other?: OtherState;
 }

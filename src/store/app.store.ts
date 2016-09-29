@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Store } from 'walts';
+import { Store, Dispatcher } from 'walts';
 
 import { AppState, IncrementState } from './app.state';
 import { AppDispatcher } from './app.dispatcher';
@@ -15,7 +15,7 @@ const INIT_STATE: AppState = {
 
 @Injectable()
 export class AppStore extends Store<AppState> {
-  constructor(protected dispatcher: AppDispatcher) {
+  constructor(protected dispatcher: Dispatcher<AppState>) {
     super(INIT_STATE, dispatcher);
   }
 
