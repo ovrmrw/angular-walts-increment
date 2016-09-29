@@ -29,6 +29,6 @@ export class AppComponent {
     this.dispatcher.emit(this.actions.decrement());
   }
 
-  get counter() { return this.store.observable.map(s => s.increment ? s.increment.counter : null); }
+  get counter() { return this.store.incrementState$.map(s => s.counter); }
 
 }

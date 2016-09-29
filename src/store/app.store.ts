@@ -18,4 +18,11 @@ export class AppStore extends Store<AppState> {
   constructor(protected dispatcher: AppDispatcher) {
     super(INIT_STATE, dispatcher);
   }
+
+
+  get incrementState$(): Observable<IncrementState> {
+    return this.observable
+      .map<IncrementState>(state => state.increment ? state.increment : { counter: 0 });
+  }
+
 }
