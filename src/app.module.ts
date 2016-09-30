@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Dispatcher } from 'walts';
 
 import { AppComponent } from './app/app.component';
-import { AppActions, AppStore } from './store';
+import { AppActions, AppDispatcher, AppStore } from './store';
 
 
 @NgModule({
   imports: [BrowserModule],
   declarations: [AppComponent],
-  providers: [AppActions, AppStore, Dispatcher],
+  providers: [AppActions, AppStore, AppDispatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

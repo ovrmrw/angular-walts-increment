@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { Dispatcher } from 'walts';
 
-import { AppActions, AppStore, AppState } from '../store';
+import { AppActions, AppDispatcher, AppStore, AppState } from '../store';
 
 
 @Component({
@@ -17,7 +16,7 @@ import { AppActions, AppStore, AppState } from '../store';
 export class AppComponent {
   constructor(
     private actions: AppActions,
-    private dispatcher: Dispatcher<AppState>,
+    private dispatcher: AppDispatcher,
     private store: AppStore,
   ) { }
 
